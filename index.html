@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container{
+
+  color:aqua;
+  display: flex;
+  flex-direction: column;
+  
+}
+body{
+    background-color: rgba(2, 7, 2, 0.8)
+}
+
+</style>
+<body>
+    <div class="container">
+           <form action="backend.php" autocomplete="on">
+        <div id="details">
+        <fieldset>
+            <legend>Your details</legend>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="yourname" required autofocus>
+    <br>
+    <br>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="eamil" required autofocus>
+    <br>
+    <br>
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" name="phone" placeholder="+910123456789" pattern="[0-9]{10}" autofocus required >
+    <br>
+    <br>
+</fieldset>
+</div>
+<div id="address">
+<fieldset><legend>Delivery address</legend>
+  
+</fieldset>
+</div>
+<div id="payment">
+    <fieldset>
+        <legend>Payment mode</legend>
+         <label for="Payment"></label>
+        <input list="pay" name="payment"> 
+       <datalist id="pay">
+        <option value="Cash-On-Delivery"></option>
+        <option value="Paytm UPI"></option>
+        <option value="UPI ID"></option>
+        <option value="Credit/Debit/ATM Card"></option>
+       </datalist>
+    </fieldset>
+</div>
+<div id="card">
+    <fieldset>
+        <legend>Card details</legend>
+        <ol>
+           <li> <fieldset>
+                <legend>card type</legend>
+                <input type="radio" name="cardtype" id="VISA" value="VISA">
+                <label for="VISA">VISA</label><br>
+                <input type="radio" name="cardtype" id="Amex" value="AmEx">
+                <label for="Amex">AmEx</label><br>
+                <input type="radio" name="cardtype" id="mastercard" value="Mastercard">
+                <label for="mastercard">Mastercard</label><br>
+            </fieldset> </li>
+            <br>
+            <li><label for="cardno">Card number</label>
+             <input type="text" name="cardno" id="cardno" autofocus required>
+            </li>
+            <br>
+            <li>
+                <label for="password">Security code</label>
+                <input type="password" name="password" id="password" autofocus required size="4" maxlength="4">
+            </li>
+            <br>
+            <li><label for="Cardholder">Card Holder Name</label>
+            <input type="text" name="cardholder" id="cardholder" autofocus required></li>
+        </ol>
+    </fieldset>
+</div>
+<input type="reset" value="reset">
+    <input type="submit" value="Order Now">
+ </form>
+    </div>
+</body>
+</html>
