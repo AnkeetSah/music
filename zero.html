@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+    .container{
+        width:100%;
+        height:100vh;
+        display: flex;
+        flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+    }
+    .item{
+        height: 400px;
+        width: 400px;
+        background-color:rgb(54, 69,79);
+        padding: 10px;
+        margin: 5px;
+        padding-left: 28px;
+        color: white;
+        margin-top: 14px;
+    }
+    .item1{
+        width: 409px;
+        height: 35px;
+        background-color:rgb(54, 69,79);
+        padding-left: 30px;
+        padding-top: 13px;
+    }
+
+    .slider{
+        width: 380px;
+        cursor: pointer;
+        color: red;
+    }
+    .submit{
+        cursor: pointer;
+        background-color: lightgreen;
+        padding: 10px;
+    }
+    .submit:hover{ background-color: rgb(54, 69,79);
+        color:lightgreen;
+
+    }
+    .c2{
+        display: flex;
+        width: 358px;
+        background-color: black;
+        height: 40px;
+        margin-bottom: 15px;
+         padding-top: 15px;
+         padding-left: 10px;
+         padding-right: 10px;
+        justify-content: flex-start;
+        justify-content: space-between;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        
+         <p style="color: white;"> <strong> Password Generator</strong></p>
+        <div class="item1" >P4$5W0rD!</div>
+        <div class="item">
+            <form action="backend.php" >
+                <label for="range">Character Length</label>
+                <br> <br>
+             <input type="range" name="range" id="range" class="slider" >
+            <br><br>
+             <input type="checkbox" name="check1" id="check1" >
+             <label for="check1" style="cursor: pointer;">Include Uppercase Letters</label>
+             <br><br>
+             <input type="checkbox" name="check2" id="check2" >
+             <label for="check2" style="cursor: pointer;">Include Lowercase Letters</label>
+             <br><br>
+             <input type="checkbox" name="check3" id="check3" >
+             <label for="check3" style="cursor: pointer;">Include Numbers</label>
+             <br><br>
+             <input type="checkbox" name="check4" id="check4" >
+             <label for="check4" style="cursor: pointer;">Include Symbols</label>
+             <br><br>
+             <div class="c2">
+                <div class="strength">STRENGTH</div>
+                <div >MEDIUM</div>
+             </div>
+              <input type="submit" value="Generate" style="border: solid 2px lightgreen; width: 380px;" class="submit">
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
